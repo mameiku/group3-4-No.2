@@ -1,0 +1,65 @@
+@startuml 図書返却シーケンス図
+hide footbox
+skinparam boundaryBackgroundColor #D5E8D4
+skinparam controlBackgroundColor  #F8CECC
+skinparam entityBackgroundColor   #DAE8FC
+
+actor 事務職員 as A
+boundary 返却メニュー画面 as B1
+boundary 返却一覧画面 as B2
+boundary 返却完了画面 as B3
+control 内容を検証 as C1
+control 返却された図書のDB更新 as C2
+entity 図書情報 as E
+
+A -> B1: 返却メニューを選択()
+activate B1
+
+B1 -> B2: 返却一覧画面を表示()
+deactivate B1
+activate B2
+
+A -> B2: 返却図書の管理番号を入力・送信()
+
+B2 -> C1: 入力内容を検証()
+activate C1
+
+opt 管理番号が登録されてなかった場合
+    C1 -> B2: メッセージ表示()
+end
+
+opt 図書の返却期限を過ぎていた場合
+    C1 -> B2: メッセージ表示()
+end
+
+opt 図書が貸し出し中でなかった場合
+    C1 -> B2: メッセージ表示()
+end
+
+opt 図書が予約されている場合
+    C1 -> B2: メッセージ表示()
+    ...図書情報を青字で画面の一覧に追加する...
+end
+
+C1 -> E:図書情報の読み取り()
+activate E
+
+E -> B2:   図書情報を一覧に追加()
+deactivate E
+
+B2 -> C1: 返却ボタンをクリック()
+
+opt 返却する図書が一冊も入力されていない場合
+    C1 -> B2: メッセージ表示()
+end
+
+
+C1 -> C2: 図書のDBを更新()
+activate C2
+
+C2 -> B3: 返却完了画面表示()
+deactivate C2
+deactivate B2
+activate B3
+
+@enduml
