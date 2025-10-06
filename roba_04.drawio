@@ -1,65 +1,122 @@
 <mxfile host="65bd71144e">
     <diagram id="Lk7X-A6lcGk3CMWkIHnM" name="ページ1">
-        <mxGraphModel dx="1499" dy="405" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1612" dy="736" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="事務職員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="-650" y="190" width="30" height="60" as="geometry"/>
+                    <mxGeometry x="-770" y="300" width="30" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="メニュー画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="3" value="メニュー画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
                     <mxGeometry x="-513" y="120" width="100" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="貸し出し履歴画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="-200" y="400" width="100" height="90" as="geometry"/>
+                <mxCell id="4" value="貸出履歴画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="219" y="115" width="100" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="貸し出し履歴制御" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="5" value="貸出履歴制御" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
                     <mxGeometry x="-150" y="115" width="80" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="図書" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="-520" y="390" width="80" height="80" as="geometry"/>
+                <mxCell id="6" value="図書" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="229" y="290" width="80" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="貸し出し履歴" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="130" y="420" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="12" value="1.アクターが操作&lt;div&gt;開始&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" source="2">
+                <mxCell id="12" value="1.貸出履歴メニューを押す" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
                     <mxGeometry width="80" relative="1" as="geometry">
-                        <mxPoint x="-600" y="219.5" as="sourcePoint"/>
+                        <mxPoint x="-730" y="310" as="sourcePoint"/>
                         <mxPoint x="-520" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="14" value="2.次の処理（画面遷移）を制御に依頼" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                <mxCell id="14" value="2.貸出履歴画面表示要求" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
                     <mxGeometry width="80" relative="1" as="geometry">
                         <mxPoint x="-410" y="160" as="sourcePoint"/>
                         <mxPoint x="-170" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="15" value="次に表示すべき画面（境界）に表示を指示" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                <mxCell id="15" value="3.貸出履歴検索画面表示" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
                     <mxGeometry width="80" relative="1" as="geometry">
                         <mxPoint x="-30" y="159" as="sourcePoint"/>
                         <mxPoint x="200" y="159.5" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="16" value="DBデータを持つ&lt;b&gt;実体&lt;/b&gt;にアクセスし、検索を依頼" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                <mxCell id="19" value="メニュー画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="-520" y="290" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="1.書名を入力し、検索ボタンを押す" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
                     <mxGeometry width="80" relative="1" as="geometry">
-                        <mxPoint x="-210" y="200" as="sourcePoint"/>
-                        <mxPoint x="-490" y="290" as="targetPoint"/>
+                        <mxPoint x="-730" y="329.5" as="sourcePoint"/>
+                        <mxPoint x="-530" y="329.5" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="17" value="実体は検索結果（データ）を制御に返す" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                <mxCell id="21" value="貸出履歴制御" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="-140" y="280" width="80" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="2.入力データと共に制御に検索処理を依頼" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
                     <mxGeometry width="80" relative="1" as="geometry">
-                        <mxPoint x="-370" y="330" as="sourcePoint"/>
-                        <mxPoint x="-190" y="210" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="-190" y="300"/>
-                        </Array>
+                        <mxPoint x="-410" y="329.5" as="sourcePoint"/>
+                        <mxPoint x="-150" y="330" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="18" value="制御は、取得した結果を画面に渡し、表示を指示" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                <mxCell id="23" value="3.DBデータを持つ&lt;b&gt;実体&lt;/b&gt;にアクセスし、検索を依頼" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
                     <mxGeometry width="80" relative="1" as="geometry">
-                        <mxPoint x="-150" y="210" as="sourcePoint"/>
-                        <mxPoint x="-90" y="310" as="targetPoint"/>
+                        <mxPoint x="-40" y="300" as="sourcePoint"/>
+                        <mxPoint x="220" y="300" as="targetPoint"/>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="4.&lt;span style=&quot;color: rgb(63, 63, 63); background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;図書リストを返す&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="220" y="360" as="sourcePoint"/>
+                        <mxPoint x="-40" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="5.図書一覧表示" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="-40" y="400" as="sourcePoint"/>
+                        <mxPoint x="220" y="440" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="貸し出し履歴画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="-513" y="520" width="100" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="1.管理番号を選択" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="-720" y="400" as="sourcePoint"/>
+                        <mxPoint x="-530" y="560" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" value="貸出履歴制御" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="-150" y="520" width="80" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="2.管理番号と共に制御に履歴の取得を依頼" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="-390" y="565" as="sourcePoint"/>
+                        <mxPoint x="-160" y="565" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="貸出履歴" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="239" y="530" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="&lt;span style=&quot;color: rgb(63, 63, 63); background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;b&gt;3.貸出履歴&lt;/b&gt;の実体に対し、関連するデータを要求&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="-60" y="550" as="sourcePoint"/>
+                        <mxPoint x="230" y="550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="4.履歴データを返す" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="230" y="600" as="sourcePoint"/>
+                        <mxPoint x="-60" y="600" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="5.貸出履歴一覧表示" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="-60" y="640" as="sourcePoint"/>
+                        <mxPoint x="219" y="714.23" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="34" value="貸出履歴画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="209" y="400" width="100" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="貸出履歴画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="670" width="100" height="90" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
