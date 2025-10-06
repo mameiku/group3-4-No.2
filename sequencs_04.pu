@@ -1,0 +1,66 @@
+@startuml
+!theme toy
+
+actor "事務職員" as Staff
+boundary "貸出履歴画面" as HScreen
+control "貸出履歴制御" as HCtrl
+entity "図書" as Book
+entity "貸出履歴" as Loan
+
+' 基本フロー ①～②: 画面表示
+Staff -> HScreen: 貸出履歴メニューを押す
+activate HScreen
+HScreen -> HCtrl: 貸出履歴画面表示要求
+activate HCtrl
+HCtrl --> HScreen: 貸出履歴検索画面表示
+deactivate HCtrl
+deactivate HScreen
+
+' 基本フロー ③: 書名検索ボタン押下
+Staff -> HScreen: 書名を入力し、検索ボタンを押下
+activate HScreen
+HScreen -> HCtrl: searchBooks(書名)
+activate HCtrl
+
+' 代替フロー ①: 書名が未入力の場合の分岐
+alt 書名が未入力の場合
+    HCtrl --> HScreen: 「書名を入力してください」メッセージ
+else 書名が入力されている場合
+    ' 基本フロー ④: DB検索と結果取得
+    HCtrl -> Book: queryByTitle(書名)
+    activate Book
+    Book --> HCtrl: 図書リスト
+    deactivate Book
+
+    ' 代替フロー ②: 該当図書がない場合の分岐
+    alt 該当する図書がない場合
+        HCtrl --> HScreen: 「該当する図書がありません」メッセージ
+    else 該当する図書がある場合
+        HCtrl --> HScreen: 図書一覧表示
+        deactivate HCtrl
+        deactivate HScreen
+
+        ' 基本フロー ⑤: 管理番号選択
+        Staff -> HScreen: 管理番号を選択
+        activate HScreen
+
+        ' 基本フロー ⑥: 履歴取得
+        HScreen -> HCtrl: viewHistory(管理番号)
+        activate HCtrl
+        HCtrl -> Loan: queryHistory(管理番号)
+        activate Loan
+        Loan --> HCtrl: 履歴データ (件数含む)
+        deactivate Loan
+
+        ' 代替フロー ③: 貸出履歴件数が0の場合の分岐
+        alt 該当する貸出履歴件数が0の場合
+            HCtrl --> HScreen: 「貸出履歴がありません」メッセージ
+        else 貸出履歴がある場合
+            HCtrl --> HScreen: 貸出履歴一覧表示
+        end
+        deactivate HCtrl
+    end
+end
+deactivate HCtrl
+deactivate HScreen
+@enduml
