@@ -1,7 +1,9 @@
-@startuml LoanHistoryViewSequence
+@startuml .
+skinparam footbox hidden
 skinparam shadowing false
 skinparam defaultMonochrome false 
 skinparam defaultFontColor black
+
 
 actor "事務職員" as Staff
 boundary "メニュー画面" as MScreen #C5E8C4/D5E8D4
