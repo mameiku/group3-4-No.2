@@ -44,7 +44,7 @@
                     <mxGeometry x="210" y="170" width="100" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="11" value="メッセージ表示" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#F8CECC;" vertex="1" parent="1">
-                    <mxGeometry x="620" y="390" width="70" height="80" as="geometry"/>
+                    <mxGeometry x="640" y="380" width="70" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="12" value="内容を検証" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#F8CECC;" vertex="1" parent="1">
                     <mxGeometry x="230" y="310" width="70" height="80" as="geometry"/>
@@ -60,10 +60,13 @@
                         <mxPoint y="5" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="15" value="管理番号が登録されてなかった場合&lt;div&gt;図書の返却期限が過ぎていた場合&lt;/div&gt;&lt;div&gt;図書が貸し出し中でなかった場合&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=-0.014;entryY=0.483;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.538;exitY=1.017;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="12" target="11">
+                <mxCell id="15" value="管理番号が登録されてなかった場合&lt;div&gt;図書の返却期限が過ぎていた場合&lt;/div&gt;&lt;div&gt;図書が貸し出し中でなかった場合&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;返却する図書が一冊も入力されていない場合&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=-0.014;entryY=0.483;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.676;exitY=0.992;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="12">
                     <mxGeometry width="80" relative="1" as="geometry">
-                        <mxPoint x="340" y="210" as="sourcePoint"/>
-                        <mxPoint x="420" y="210" as="targetPoint"/>
+                        <mxPoint x="268.64" y="410" as="sourcePoint"/>
+                        <mxPoint x="640" y="437.28" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="639.98" y="437.64"/>
+                        </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="16" value="" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1.014;exitY=0.542;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.014;entryY=0.525;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="11" target="5">
@@ -82,7 +85,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="18" value="図書のDB更新" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#F8CECC;" vertex="1" parent="1">
-                    <mxGeometry x="440" y="270" width="70" height="80" as="geometry"/>
+                    <mxGeometry x="450" y="260" width="70" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="図書情報" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#D4E1F5;" vertex="1" parent="1">
                     <mxGeometry x="400" y="170" width="80" height="80" as="geometry"/>
