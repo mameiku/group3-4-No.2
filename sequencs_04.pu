@@ -1,15 +1,14 @@
 @startuml LoanHistoryViewSequence
 
-' ロバストネス図の色をオブジェクトに直接指定
 actor "事務職員" as Staff
-' Boundary (緑系)
-boundary "メニュー画面" as MScreen #C1E1C1/3CB371
-boundary "貸出履歴画面" as HScreen #C1E1C1/3CB371
-' Control (赤系)
-control "貸出履歴制御" as HCtrl #F08080/B22222
-' Entity (青系)
-entity "図書" as Book #ADD8E6/4682B4
-entity "貸出履歴" as Loan #ADD8E6/4682B4
+' Boundary (緑系) - 色を最大限に薄く調整
+boundary "メニュー画面" as MScreen #F9FFF9/82B366
+boundary "貸出履歴画面" as HScreen #F9FFF9/82B366
+' Control (赤系) - 色を最大限に薄く調整
+control "貸出履歴制御" as HCtrl #FFFFF9/DC4A4C
+' Entity (青系) - 色を最大限に薄く調整
+entity "図書" as Book #F9F9FF/6C8EBF
+entity "貸出履歴" as Loan #F9F9FF/6C8EBF
 
 autonumber
 
@@ -22,14 +21,15 @@ activate HCtrl
 HCtrl --> HScreen: 貸出履歴検索画面表示
 deactivate HCtrl
 activate HScreen 
+
 ' 基本フロー ③: 書名検索ボタン押下
 Staff -> HScreen: 書名を入力し、検索ボタンを押下
 
 HScreen -> HCtrl: searchBooks(書名)
 activate HCtrl
 
-' 代替フローと基本フローの分岐処理
-alt 書名が未入力の場合 (代替フロー①)
+' 代替フロー ①: 書名が未入力の場合の分岐
+alt 書名が未入力の場合
     HCtrl --> HScreen: 「書名を入力してください」メッセージ
     deactivate HCtrl
     note right of HScreen: ①-2 基本フロー③へ戻る
@@ -49,7 +49,7 @@ else 書名が入力されている場合
     
     else 該当する図書がある場合
         HCtrl --> HScreen: 図書一覧表示
-        deactivate HCtrl 
+        deactivate HCtrl
 
         ' 基本フロー ⑤: 管理番号選択
         Staff -> HScreen: 管理番号を選択
@@ -73,5 +73,5 @@ else 書名が入力されている場合
         end
     end
 end
-deactivate HScreen
+deactivate HScreen 
 @enduml
