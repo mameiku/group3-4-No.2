@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0" version="28.2.5">
+  <diagram id="Go3Am-tnHGSBK9u87tKB" name="ページ1">
+    <mxGraphModel dx="1017" dy="1629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-2" value="事務職員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="130" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-3" value="メニュー画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="194" y="110" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-4" value="図書予約&lt;div&gt;制御&lt;/div&gt;" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="343.5" y="80" width="70" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-5" value="会員" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="396" y="201" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-6" value="図書予約画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="80" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-7" value="メッセージ" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="264" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-8" value="図書一覧画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="549" y="197" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-9" value="予約完了画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="-40" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-10" value="予約情報" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="323" y="293" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-11" value="図書" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="249" y="190" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-12" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="120" y="170" as="sourcePoint" />
+            <mxPoint x="180" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-15" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="380" y="80" as="sourcePoint" />
+            <mxPoint x="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-16" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="363" y="167" as="sourcePoint" />
+            <mxPoint x="358" y="288" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-17" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="275" y="140" as="sourcePoint" />
+            <mxPoint x="330" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-18" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="416" y="142" as="sourcePoint" />
+            <mxPoint x="546" y="212" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-20" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="420" y="127" as="sourcePoint" />
+            <mxPoint x="470" y="112" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-22" value="ユーザーに情報を入力してもらう" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="390" y="70" width="106" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-23" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="389" y="165" as="sourcePoint" />
+            <mxPoint x="410" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-24" value="会員番号を照合" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="411" y="174" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-28" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="345" y="164" as="sourcePoint" />
+            <mxPoint x="315" y="194" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-30" value="書名、著者、出版社の情報が渡される" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="519" y="155" width="75" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-34" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="350" y="90" as="sourcePoint" />
+            <mxPoint x="329" y="67" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-36" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="340" y="30" as="sourcePoint" />
+            <mxPoint x="470" y="-10" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
