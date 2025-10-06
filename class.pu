@@ -75,6 +75,14 @@ class 貸出情報 {
  +返却する(): void
 }
 
+class 貸出履歴 {
+ -履歴ID: int
+ -貸出日: Date
+ -返却日: Date
+
+ +履歴を表示する(): void
+}
+
 class 予約情報 {
  -予約ID: int
  -予約日時: DateTime
@@ -82,6 +90,16 @@ class 予約情報 {
 
  +予約する(): void
  +キャンセルする(): void
+}
+
+class 予約待ちリスト {
+ -リストID: int
+ -会員ID: int
+ -図書ID: int
+ -予約日時: DateTime
+
+ +追加する(): void
+ +削除する(): void
 }
 
 @enduml
