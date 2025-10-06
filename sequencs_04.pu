@@ -1,4 +1,4 @@
-@startuml
+@startuml .
 !theme toy
 
 actor "事務職員" as Staff
