@@ -10,7 +10,7 @@
     activate 画面
     画面->>画面: 図書貸出画面を表示 (②)
 
-    事務職員->>画面: 会員番号入力 (③)
+    事務職員->>画面: 会員番号を入力 (③)
     画面->>制御: 会員情報要求(会員番号)
     activate 制御
     制御->>会員DB: 会員検索()
@@ -21,7 +21,7 @@
         制御-->>画面: エラーメッセージ
         deactivate 制御
         画面->>画面: エラー表示
-        note right of 画面: 基本フロー③へ戻る
+        note right of 画面: 基本フロー③へ戻る (①-2)
     else 正常時
         会員DB-->>制御: 会員情報
         deactivate 会員DB
@@ -40,28 +40,43 @@
             deactivate 在庫DB
             制御-->>画面: 理由表示
             deactivate 制御
-            note right of 画面: 基本フロー⑤へ戻る
+            note right of 画面: 基本フロー⑤へ戻る (②-2, ③-2)
         else 正常時
             在庫DB-->>制御: 書名
             deactivate 在庫DB
             制御-->>画面: 書名 (⑥)
             deactivate 制御
         end
+        
+        opt キャンセル処理 (代替フロー④)
+            事務職員->>画面: キャンセルボタン押下 (④-1)
+            画面->>制御: 貸出一覧から削除(管理番号)
+            activate 制御
+            制御-->>画面: 削除完了
+            deactivate 制御
+            note right of 画面: 基本フロー⑤へ戻り入力待ち
+        end
     end
 
     事務職員->>画面: 貸出確定 (⑦)
     画面->>制御: 貸出処理開始(会員ID, 貸出一覧)
     activate 制御
-    制御->>在庫DB: 在庫引当・減少()
-    activate 在庫DB
-    在庫DB-->>制御: 完了
-    deactivate 在庫DB
-    制御->>在庫DB: 貸出情報登録()
-    activate 在庫DB
-    在庫DB-->>制御: 完了
-    deactivate 在庫DB
-    制御-->>画面: 処理完了
-    deactivate 制御
-
-    画面->>画面: 貸出完了画面を表示 (⑧)
+    alt 一冊も確定していない場合 (代替フロー⑤)
+        制御-->>画面: エラーメッセージ
+        deactivate 制御
+        画面->>画面: "貸し出す書籍を入力..."表示 (⑤-1)
+        note right of 画面: 基本フロー⑤へ戻る (⑤-2)
+    else 正常時 (基本フロー⑧)
+        制御->>在庫DB: 在庫引当・減少()
+        activate 在庫DB
+        在庫DB-->>制御: 完了
+        deactivate 在庫DB
+        制御->>在庫DB: 貸出情報登録()
+        activate 在庫DB
+        在庫DB-->>制御: 完了
+        deactivate 在庫DB
+        制御-->>画面: 処理完了
+        deactivate 制御
+        画面->>画面: 貸出完了画面を表示 (⑧)
+    end
     deactivate 画面
