@@ -1,0 +1,67 @@
+@startuml
+
+    actor 事務職員
+    participant 画面 as 図書貸出画面
+    participant 制御 as 貸出制御
+    participant 会員DB as 会員管理DB
+    participant 在庫DB as 図書在庫DB
+
+    事務職員->>画面: 貸出メニュー選択 (①)
+    activate 画面
+    画面->>画面: 図書貸出画面を表示 (②)
+
+    事務職員->>画面: 会員番号入力 (③)
+    画面->>制御: 会員情報要求(会員番号)
+    activate 制御
+    制御->>会員DB: 会員検索()
+    activate 会員DB
+    alt 会員未登録の場合 (代替フロー①)
+        会員DB-->>制御: エラー
+        deactivate 会員DB
+        制御-->>画面: エラーメッセージ
+        deactivate 制御
+        画面->>画面: エラー表示
+        note right of 画面: 基本フロー③へ戻る
+    else 正常時
+        会員DB-->>制御: 会員情報
+        deactivate 会員DB
+        制御-->>画面: 氏名, 種別 (④)
+        deactivate 制御
+    end
+
+    loop 書籍の数だけ繰り返し (⑤, ⑥)
+        事務職員->>画面: 管理番号入力 (⑤)
+        画面->>制御: 図書情報要求(管理番号)
+        activate 制御
+        制御->>在庫DB: 図書検索・在庫確認()
+        activate 在庫DB
+        alt 貸出不可の場合 (代替フロー②, ③)
+            在庫DB-->>制御: 貸出不可理由
+            deactivate 在庫DB
+            制御-->>画面: 理由表示
+            deactivate 制御
+            note right of 画面: 基本フロー⑤へ戻る
+        else 正常時
+            在庫DB-->>制御: 書名
+            deactivate 在庫DB
+            制御-->>画面: 書名 (⑥)
+            deactivate 制御
+        end
+    end
+
+    事務職員->>画面: 貸出確定 (⑦)
+    画面->>制御: 貸出処理開始(会員ID, 貸出一覧)
+    activate 制御
+    制御->>在庫DB: 在庫引当・減少()
+    activate 在庫DB
+    在庫DB-->>制御: 完了
+    deactivate 在庫DB
+    制御->>在庫DB: 貸出情報登録()
+    activate 在庫DB
+    在庫DB-->>制御: 完了
+    deactivate 在庫DB
+    制御-->>画面: 処理完了
+    deactivate 制御
+
+    画面->>画面: 貸出完了画面を表示 (⑧)
+    deactivate 画面
