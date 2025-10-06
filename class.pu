@@ -1,7 +1,7 @@
 @startuml 大原情報科学大学・図書館システムクラス図
 skinparam handwritten false
 skinparam classAttributeIconSize 0
-skinparam defaultFontName ""
+
 ' ====================================================================
 ' 1. クラス定義 (Core Entities)
 ' ====================================================================
@@ -41,6 +41,8 @@ class 会員 {
  -生年月日: Date
  -電話番号: String
  -メールアドレス: String
+ -貸出上限冊数: int
+ -現在の貸出冊数: int
 
  +予約する(): void
  +借りる(): void
