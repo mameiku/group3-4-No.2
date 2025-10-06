@@ -1,7 +1,7 @@
 @startuml 大原情報科学大学・図書館システムクラス図
 skinparam handwritten false
 skinparam classAttributeIconSize 0
-skinparam defaultFontName ""
+
 ' ====================================================================
 ' 1. クラス定義 (Core Entities)
 ' ====================================================================

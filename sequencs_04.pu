@@ -1,25 +1,14 @@
 @startuml LoanHistoryViewSequence
 
-' **エラーを避けるため、シンプルな色定義のみを適用**
-skinparam boundary {
-    BackgroundColor #C1E1C1  ' 緑系
-    BorderColor #3CB371
-}
-skinparam control {
-    BackgroundColor #F08080  ' 赤系
-    BorderColor #B22222
-}
-skinparam entity {
-    BackgroundColor #ADD8E6  ' 青系
-    BorderColor #4682B4
-}
-
 actor "事務職員" as Staff
-boundary "メニュー画面" as MScreen ' ①の操作元として追加
-boundary "貸出履歴画面" as HScreen
-control "貸出履歴制御" as HCtrl
-entity "図書" as Book
-entity "貸出履歴" as Loan
+' Boundary (緑系) - 色を最大限に薄く調整
+boundary "メニュー画面" as MScreen #F9FFF9/82B366
+boundary "貸出履歴画面" as HScreen #F9FFF9/82B366
+' Control (赤系) - 色を最大限に薄く調整
+control "貸出履歴制御" as HCtrl #FFFFF9/DC4A4C
+' Entity (青系) - 色を最大限に薄く調整
+entity "図書" as Book #F9F9FF/6C8EBF
+entity "貸出履歴" as Loan #F9F9FF/6C8EBF
 
 autonumber
 
@@ -31,7 +20,7 @@ deactivate MScreen
 activate HCtrl
 HCtrl --> HScreen: 貸出履歴検索画面表示
 deactivate HCtrl
-activate HScreen ' 画面が表示され、操作待ち状態になる
+activate HScreen 
 
 ' 基本フロー ③: 書名検索ボタン押下
 Staff -> HScreen: 書名を入力し、検索ボタンを押下
@@ -84,5 +73,5 @@ else 書名が入力されている場合
         end
     end
 end
-deactivate HScreen ' ユースケース全体の終了
+deactivate HScreen 
 @enduml
