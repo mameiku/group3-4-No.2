@@ -41,6 +41,8 @@ class 会員 {
  -生年月日: Date
  -電話番号: String
  -メールアドレス: String
+ -貸出上限冊数: int
+ -現在の貸出冊数: int
 
  +予約する(): void
  +借りる(): void

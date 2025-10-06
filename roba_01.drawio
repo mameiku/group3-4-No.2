@@ -7,31 +7,31 @@
         <mxCell id="EQFnTfvqxCSxP_mrlIuR-2" value="事務職員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="70" y="130" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="EQFnTfvqxCSxP_mrlIuR-3" value="メニュー画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-3" value="メニュー画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#E6FFCC;" vertex="1" parent="1">
           <mxGeometry x="194" y="110" width="70" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="EQFnTfvqxCSxP_mrlIuR-4" value="図書予約&lt;div&gt;制御&lt;/div&gt;" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-4" value="図書予約&lt;div&gt;制御&lt;/div&gt;" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#FFCCCC;" vertex="1" parent="1">
           <mxGeometry x="343.5" y="80" width="70" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="EQFnTfvqxCSxP_mrlIuR-5" value="会員" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-5" value="会員" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#CCE5FF;" vertex="1" parent="1">
           <mxGeometry x="396" y="201" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="EQFnTfvqxCSxP_mrlIuR-6" value="図書予約画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-6" value="図書予約画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#E6FFCC;" vertex="1" parent="1">
           <mxGeometry x="480" y="80" width="70" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="EQFnTfvqxCSxP_mrlIuR-7" value="メッセージ" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-7" value="メッセージ" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#E6FFCC;" vertex="1" parent="1">
           <mxGeometry x="264" width="70" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="EQFnTfvqxCSxP_mrlIuR-8" value="図書一覧画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-8" value="図書一覧画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#E6FFCC;" vertex="1" parent="1">
           <mxGeometry x="549" y="197" width="70" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="EQFnTfvqxCSxP_mrlIuR-9" value="予約完了画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-9" value="予約完了画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#E6FFCC;" vertex="1" parent="1">
           <mxGeometry x="480" y="-40" width="70" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="EQFnTfvqxCSxP_mrlIuR-10" value="予約情報" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-10" value="予約情報" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#CCE5FF;" vertex="1" parent="1">
           <mxGeometry x="323" y="293" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="EQFnTfvqxCSxP_mrlIuR-11" value="図書" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="EQFnTfvqxCSxP_mrlIuR-11" value="図書" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#CCE5FF;" vertex="1" parent="1">
           <mxGeometry x="249" y="190" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="EQFnTfvqxCSxP_mrlIuR-12" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
