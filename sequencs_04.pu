@@ -1,14 +1,14 @@
 @startuml LoanHistoryViewSequence
+skinparam shadowing false
+skinparam defaultMonochrome false 
+skinparam defaultFontColor black
 
 actor "事務職員" as Staff
-' Boundary (緑系) - 色を最大限に薄く調整
-boundary "メニュー画面" as MScreen #F9FFF9/82B366
-boundary "貸出履歴画面" as HScreen #F9FFF9/82B366
-' Control (赤系) - 色を最大限に薄く調整
-control "貸出履歴制御" as HCtrl #FFFFF9/DC4A4C
-' Entity (青系) - 色を最大限に薄く調整
-entity "図書" as Book #F9F9FF/6C8EBF
-entity "貸出履歴" as Loan #F9F9FF/6C8EBF
+boundary "メニュー画面" as MScreen #C5E8C4/D5E8D4
+boundary "貸出履歴画面" as HScreen #C5E8C4/D5E8D4
+control "貸出履歴制御" as HCtrl #F4CDCB/F8CECC
+entity "図書" as Book #DCEBFC/DAE8FC
+entity "貸出履歴" as Loan #DCEBFC/DAE8FC
 
 autonumber
 
