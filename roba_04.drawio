@@ -5,7 +5,61 @@
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="事務職員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="-630" y="190" width="30" height="60" as="geometry"/>
+                    <mxGeometry x="-650" y="190" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="メニュー画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="-513" y="120" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="貸し出し履歴画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="-200" y="400" width="100" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="貸し出し履歴制御" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="-150" y="115" width="80" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="図書" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="-520" y="390" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="貸し出し履歴" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="420" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="1.アクターが操作&lt;div&gt;開始&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" source="2">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="-600" y="219.5" as="sourcePoint"/>
+                        <mxPoint x="-520" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="2.次の処理（画面遷移）を制御に依頼" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="-410" y="160" as="sourcePoint"/>
+                        <mxPoint x="-170" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="次に表示すべき画面（境界）に表示を指示" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="-30" y="159" as="sourcePoint"/>
+                        <mxPoint x="200" y="159.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="DBデータを持つ&lt;b&gt;実体&lt;/b&gt;にアクセスし、検索を依頼" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="-210" y="200" as="sourcePoint"/>
+                        <mxPoint x="-490" y="290" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="実体は検索結果（データ）を制御に返す" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="-370" y="330" as="sourcePoint"/>
+                        <mxPoint x="-190" y="210" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-190" y="300"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="制御は、取得した結果を画面に渡し、表示を指示" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="-150" y="210" as="sourcePoint"/>
+                        <mxPoint x="-90" y="310" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
             </root>
         </mxGraphModel>
